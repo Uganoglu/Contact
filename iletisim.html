@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>blogerx</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" /> 
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <style>
+       *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @media (min-width: 576px) {
+            .container {
+                max-width: 540px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                max-width: 960px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+        }
+        .contact-box{
+            width:100%;
+            display:flex;
+            align-items:center;
+            position:relative;
+           height: calc(100vh - 150px);
+           z-index: 0;
+        }
+
+        .contact-area {
+            padding: 40px 0px;
+        }
+
+.contact-inner-box {
+    width: 40%;
+}
+
+        .contact-inner-box .contact-inner{
+            display:flex;
+            align-items:center;        
+            padding:25px 0px;
+
+        }
+
+    .contact-inner-box .contact-icon{
+        height:60px;
+        width:60px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      font-size:21px;
+      border:2px solid #000;
+      border-radius:50%;
+      color:#000;
+      padding:25px;
+    }
+
+    .contact-inner-box .text {
+            margin-left:20px;
+            line-height: 22px;
+    }
+    .contact-inner-box .text h3 {
+           margin-bottom: 10px;
+    }
+
+.contact-form {
+    width: 60%;
+    position: relative;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.contact-form-inputbox {
+    padding: 12px;
+    width: 100%;
+    cursor: default;
+}
+
+.contact-form-inputbox input[type=text] {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #000;
+        outline: none;
+        padding: 5px;
+        cursor: default;
+        letter-spacing: 0.7px;
+        font-size:16px;
+    }
+
+    .contact-form-inputbox textarea {
+        border: none;
+        border-bottom: 2px solid #000;
+        resize: none;
+        width: 100%;
+        outline: none;
+        cursor: default;
+        font-size:16px;
+        letter-spacing: 0.7px;
+        line-height: 20px;
+        font-family: sans-serif;
+        padding: 5px;
+    }
+
+    .contact-form-inputbox textarea span {
+        transition-property:transform;
+        transition-duration:2s;
+    }
+    .contact-form-inputbox input[type=text]:focus + span,
+    .contact-form-inputbox input[type=text]:valid + span,
+    .contact-form-inputbox textarea:focus + span,
+    .contact-form-inputbox textarea:valid + span {
+            transform: translateY(-20px);
+            color:#e52320;
+        }
+
+
+        .dugme {
+    float: right;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background-color: #fff;
+    border:2px solid #000;
+    margin-right: 5px;
+    color:#000;
+    outline: none;
+    letter-spacing: 1px;
+    font-size: 18px;
+    border-radius: 25px;
+    padding: 8px 16px;
+    cursor: default;
+}
+
+.dugme:hover{
+    border-color: #e52320;
+    color: #fff;
+    background-color: #e52320;
+}
+
+            .dugme .buton-text {
+             
+                color: #000;
+             
+            }
+
+            .contact-form-inputbox span {
+                position: absolute;
+                left: 10px;
+                padding: 5px;
+            }
+
+      @media (max-width:768px){
+
+.contact-box{
+            padding:0px;
+            flex-direction:column;
+            height: auto;
+        }
+        .contact-inner-box{
+            width: 100%;
+        }
+            .contact-inner-box .contact-inner{
+                padding:20px 0px;
+            }
+
+            .contact-form {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+        .dugme {
+            padding: 8px 12px;
+        }
+.contact-area{
+    padding: 20px 0px !important;
+}
+      }
+
+      
+.contact-title-box{
+    display: flex;
+    justify-content: center;
+    margin:0px 0 20px 0;
+    z-index: -1;
+    
+}
+.contact-title{
+    font-size: 1.7em;
+    letter-spacing: 1.8px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding:0px 0px 12px;
+    position: relative;
+    justify-content: center;
+    z-index:-1;
+}
+
+.contact-title:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 4px;
+    background-color: #e52320;
+}
+.contact-title-text {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 40%;
+    letter-spacing: 1.8px;
+    transform: translate(-50%, 50%);
+    font-size: 20px;
+    height: auto;
+    background-color: #fff;
+    text-align: center;
+    color: #000;
+}
+
+#check:checked ~ main .container .contact-box {
+    z-index: -1;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+
+    </header>
+    <main>
+        <div class="container">
+            <div class="contact-area">
+                 
+
+            <div class="contact-title-box">
+                <div class="contact-title">Contact Us
+         <div class="contact-title-text">7 / 24</div>
+                </div>
+                </div>
+
+                <div class="contact-box">
+
+                    <div class="contact-inner-box">
+        
+                        <div class="contact-inner">
+                            <div class="contact-icon">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </div>
+                            <div class="text">
+                                <h3>Telefon:</h3>
+                                <p>+90(541) 356 15 60</p>
+                            </div>
+                        </div>
+        
+                        <div class="contact-inner">
+                            <div class="contact-icon">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            </div>
+                            <div class="text">
+                                <h3>Adres:</h3>
+                                <p>Karataş Mah. Hürriyet Cad. No:1201 / 35 <br /> KONAK / İZMİR</p>
+                            </div>
+                        </div>
+        
+        
+                        <div class="contact-inner">
+                            <div class="contact-icon">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="text">
+                                <h3>E-mail:</h3>
+                                <p>dursunali60@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <form class="contact-form" method="post">
+        
+                        <div class="contact-form-inputbox">
+                            <input type="text" required="required" />
+                            <span>İsim</span>
+                        </div>
+                        <div class="contact-form-inputbox">
+                            <input type="text" required="required"  />
+                            <span>E-mail</span>
+                        </div>
+                        <div class="contact-form-inputbox">
+                            <input type="text" required="required" />
+                            <span>Konu</span>
+                        </div>
+                        <div class="contact-form-inputbox">
+                            <textarea required="required" rows="4"></textarea>
+                            <span>Mesaj</span>
+                        </div>
+                        <button class="dugme">
+                         Gönder
+                        </button>
+        
+                    </form>
+        
+                </div>
+                </div>
+                </div>
+    </main>
+
+</body>
+</html>
